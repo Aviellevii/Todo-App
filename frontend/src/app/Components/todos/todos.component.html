@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="search">
+        <input type="text" placeholder="please enter value" [(ngModel)]="filteredValue">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+    </div>
+    <div class="overflow">
+        <div class="todos" *ngFor="let item of todos | filter:filteredValue">
+            <app-todo [todo] = "item" (deleteEvent)="ondel($event)"></app-todo>
+        </div>
+        <div class="empty" *ngIf="todos?.length===0"><h1>Empty list Todos Please add todo</h1></div>
+    </div>
+    <div class="add-div">
+        <button class="add-btn" routerLink="/add"> + Add</button>
+    </div>
+</div>

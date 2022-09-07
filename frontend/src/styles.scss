@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@200&family=Quicksand:wght@500&family=Radio+Canada:wght@300&family=Roboto+Slab&family=Roboto:wght@300&display=swap');
+@import "~alertifyjs/build/css/alertify.min.css";
+@import "~alertifyjs/build/css/themes/bootstrap.rtl.min.css";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width:100%;
+    height: 80%;
+    font-family: 'Fredoka One', cursive;
+    background-image:linear-gradient(to right,#e22865,#37adcd);
+    color:white;
+}
+
+::-webkit-scrollbar-track
+{
+   border: 1px solid black;
+   background-color: #F5F5F5;
+}
+
+
+::-webkit-scrollbar
+{
+   display: none;
+   width: 10px;
+   background-color: #F5F5F5;
+}
+::-webkit-scrollbar:hover{
+   display: block;
+}
+::-webkit-scrollbar-thumb
+{
+   background-color: #000000;	
+}
+input.ng-invalid.ng-touched{
+   border-color: red;
+}
+.error-block{
+   color: red;
+}
+.account{
+   text-align:center;
+   margin-top: 0.5rem;
+   font-size: 1.2rem;
+   color: black;
+}
+.navigate{
+   cursor:pointer;
+   color:#0095f6;
+   font-weight:bold;
+}

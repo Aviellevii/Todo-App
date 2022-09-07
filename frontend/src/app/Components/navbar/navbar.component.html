@@ -1,0 +1,7 @@
+<div class="navbar">
+    <i class="fas fa-clipboard-list"></i>
+    <h1>ToDo <span *ngIf="loggin()">{{name}}</span></h1>
+    <div class="logout" *ngIf="loggin()">
+        <button class="btn_logout" (click)="logOut()">logout</button>
+    </div>
+</div>

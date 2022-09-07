@@ -1,0 +1,21 @@
+<div class="wrap">
+    <div class="container">
+        <form [formGroup]="form" (ngSubmit)="submit()">
+            <h1>Login Page</h1>
+            <div class="details">
+                <label>Username</label>
+                <input type="text" placeholder="enter username" formControlName="username">
+                <span *ngIf = "fc.username.errors && isSubmitted" class="error-block">
+                    <span *ngIf="fc.username.errors.required">please enter value</span>
+                </span>
+                <label>Password</label>
+                <input type="password" placeholder="enter password" formControlName="password">
+                <span *ngIf = "fc.password.errors && isSubmitted" class="error-block">
+                    <span *ngIf="fc.password.errors.required">please enter value</span>
+                </span> 
+                <button class="login-btn" type="submit">login</button>
+                <p class="account">Have an account? <span class="navigate" routerLink="/register">  Sign up</span></p>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+.navbar{
+    margin:1.3rem auto;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    .logout{
+        position: absolute;
+        right: 2rem;
+        .btn_logout{
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: bold;
+            display:block;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 8px;
+            margin: 1.5rem auto;
+        }
+        .btn_logout:hover{
+            background-color: inherit;
+            color: white;
+        }
+     }
+}
+i{
+    margin-right:1rem;
+    font-size: 2.1rem;
+}
+

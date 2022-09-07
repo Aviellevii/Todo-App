@@ -1,0 +1,14 @@
+<div class="todo" (click) = "Update(todo)" [ngClass]="{'Complete':todo.completed}">
+    <h1>{{todo.title}}</h1>
+    <div class="text">
+        <p>{{todo.body}}</p>
+        <div class="buttons">
+            <button class="del-btn" (click)="ondelBtn(todo._id)">
+                <i class="fas fa-trash-alt"></i>
+            </button>
+            <button class="edit-btn" routerLink="add/{{todo._id}}">
+                <i class="fas fa-edit"></i>
+            </button>
+        </div>
+    </div>
+</div>
