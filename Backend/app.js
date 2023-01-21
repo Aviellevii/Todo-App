@@ -10,7 +10,7 @@ const checkAuth = require('./api/middleware/chekAuth')
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(cors());
-
+mongoose.set('strictQuery',false);
 mongoose.connect(`mongodb+srv://${process.env.MONG_USERNAME}:${process.env.MONGO_PASSWORD}@avielnodejs.qrpj6.mongodb.net/todos?retryWrites=true&w=majority`,{
     useNewUrlParser:true,
     useUnifiedTopology:true,
