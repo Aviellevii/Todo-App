@@ -1,4 +1,5 @@
 const express = require('express');
+const dotenv =require('dotenv').config();
 const app = express();
 var cors = require('cors');
 const morgan = require('morgan');
@@ -11,7 +12,7 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(cors());
 mongoose.set('strictQuery',false);
-mongoose.connect(`mongodb+srv://${process.env.MONG_USERNAME}:${process.env.MONGO_PASSWORD}@avielnodejs.qrpj6.mongodb.net/todos?retryWrites=true&w=majority`,{
+mongoose.connect(`${process.env.DATABASE}`,{
     useNewUrlParser:true,
     useUnifiedTopology:true,
 });
